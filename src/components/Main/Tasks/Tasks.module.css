@@ -1,0 +1,9 @@
+.tasks__wrapper {
+    background-color: #FAFAFA;
+}
+
+.singleTask__wrapper {
+    background-color: #F5F5F5;
+    margin: 5px 0;
+    padding: 15px;
+}

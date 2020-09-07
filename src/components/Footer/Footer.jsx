@@ -1,0 +1,10 @@
+import React from 'react';
+import style from './Footer.module.css'
+
+const Footer = (props) => {
+    return (
+        <div className={style.header__wrapper}>footer</div>
+    )
+}
+
+export default Footer;
