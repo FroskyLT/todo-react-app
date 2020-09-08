@@ -1,5 +1,5 @@
 .app__wrapper {
-    min-height: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 3fr 9fr;
     grid-template-rows: 80px 1fr 50px;
@@ -13,22 +13,24 @@
 .app__header {
     grid-area: header;
     border: 2px solid #E1E1E1;
-    padding: 10px 5px;
+    padding: 10px 10px 10px 5px;
 }
 .app__navbar {
     grid-area: nav;
-    background: rgb(28,162,242);
-    background: linear-gradient(0deg, rgba(28,162,242,1) 0%, rgba(68,173,237,1) 51%, rgba(21,147,222,1) 100%);
+    background: rgb(70,149,204);
+    background: linear-gradient(0deg, rgba(70,149,204,1) 0%, rgba(90,169,214,1) 50%, rgba(70,149,204,1) 100%);
     padding: 10px 5px 5px;
+    overflow: auto;
 }
 .app__main {
     grid-area: main;
     padding: 20px;
+    overflow: auto;
 }
 .app__footer {
     grid-area: footer;
     border: 2px solid #E1E1E1;
-    padding: 5px;
+    padding: 0 5px;
 }
 
 @media(max-width: 480px){
@@ -40,6 +42,12 @@
         "footer";
         grid-template-columns: 12fr;
         grid-template-rows: 50px 100px 1fr 50px;
+    }
+    .app__header {
+        padding: 5px;
+    }
+    .app__navbar {
+        padding: 5px;
     }
 }
     
