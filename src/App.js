@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 import Modal from './components/Modal/Modal';
 
 const App = (props) => {
-  let showModal = () => { if (props.state.modalBlock.show) return <Modal dispatch={props.dispatch} />; }
+  let showModal = () => { if (props.state.modalBlock.show) return <Modal dispatch={props.dispatch} mainPage={props.state.mainPage} />; }
 
   return (
     <div className={style.app__wrapper}>

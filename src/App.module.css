@@ -12,7 +12,8 @@
 
 .app__header {
     grid-area: header;
-    border: 2px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+    background-color: #FAFAFA;
     padding: 10px 10px 10px 5px;
 }
 .app__navbar {
@@ -29,7 +30,8 @@
 }
 .app__footer {
     grid-area: footer;
-    border: 2px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    background-color: #FAFAFA;
     padding: 0 5px;
 }
 

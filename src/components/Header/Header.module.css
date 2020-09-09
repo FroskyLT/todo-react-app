@@ -21,13 +21,14 @@
     line-height: 0.95em;
     cursor: pointer;
     background-color: #E9E9E9;
+    transition: 500ms;
+    color: #C0C0C0;
 }
 
 .header__buttonAdd span {
     font-weight: 300;
     display: block;
     text-decoration: none;
-    color: #C0C0C0;
 }
 
 @media(max-width: 480px){
@@ -38,4 +39,9 @@
         font-size: 2em;
         line-height: 0.625em;
     }
+}
+
+.header__buttonAdd:hover {
+    background-color: #E1E1E1;
+    color: #B0B0B0;
 }
