@@ -1,9 +1,101 @@
 .tasks__wrapper {
-    background-color: #FAFAFA;
+    background-color: #F0F0F0;
+    border-radius: 10px;
 }
 
 .singleTask__wrapper {
-    background-color: #F0F0F0;
-    margin: 5px 0;
     padding: 15px;
+    border-bottom: 1px solid #E0E0E0;
 }
+
+.singleTask__wrapper:last-child {
+    border-bottom: none;
+}
+
+.singleTask__container {
+    margin: 10px 5px;
+}
+
+.singleTask__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.singleTask__text {
+    flex: 1 1 auto;
+}
+
+.singleTask__text input {
+    border-radius: 50%;
+}
+
+.singleTask__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    margin: 0 10px 0 0;
+
+    position: relative;
+    width: 0;
+    height: 0;
+    
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid #ccc;
+    border-left:   .3em solid transparent;
+  
+    font-size: 0.8em;
+}
+    .star:before, .star:after {
+        content: '';
+        
+        display: block;
+        width: 0;
+        height: 0;
+        
+        position: absolute;
+        top: .6em;
+        left: -1em;
+
+        border-right:  1em solid transparent;
+        border-bottom: .7em  solid #ccc;
+        border-left:   1em solid transparent;
+
+        transform: rotate(-35deg);
+    }
+
+    .star:after {  
+        transform: rotate(35deg);
+    }
+
+.x {
+    margin: 0 0 0 10px;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .x::before,
+    .x::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #353535;
+    }
+
+    .x::before {
+        transform: rotate(45deg);
+    }
+
+    .x::after {
+        transform: rotate(-45deg);
+    }

@@ -87,5 +87,45 @@
     }
 
     .headerModal__main_button button:hover {
+        background-color: #175c88;
+    }
+
+    .headerModal__main_button button:active {
         background-color: #194572;
+    }
+
+    @media(max-width: 1024px) {
+        .headerModal__body {
+            width: 55%;
+            
+        }
+    }
+
+    @media(max-width: 768px) {
+        .headerModal__body {
+            width: 70%;
+            
+        }
+    }
+
+    @media(max-width: 480px) {
+        .headerModal__body {
+            width: 90%;
+            height: 60%;
+            display: grid;
+            grid-template-rows: 1fr 11fr;
+        }
+
+        .headerModal__main {
+            align-self: center;
+            margin: 0 auto 20px;
+        }
+
+        .headerModal__main_header h1 {
+            font-size: 2.3em;
+        }
+
+        .headerModal__main_textarea textarea{
+            padding: 35px 5px;
+        }
     }

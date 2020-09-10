@@ -10,7 +10,6 @@ const Modal = (props) => {
         let text = e.target.value;
         props.dispatch(updateSingleTaskActionCreator(text));
     }
-    debugger;
     return (
         <div className={style.headerModal__wrapper}>
             <div className={style.headerModal__body}>
