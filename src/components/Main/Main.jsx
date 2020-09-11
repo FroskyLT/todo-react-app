@@ -5,7 +5,7 @@ import Tasks from './Tasks/Tasks';
 const Main = (props) => {
     return (
         <div className={style.main__wrapper}>
-            <Tasks tasks={props.mainPage.tasks}/>
+            <Tasks tasks={props.mainPage.tasks} dispatch={props.dispatch}/>
         </div>
     )
 }

@@ -1,7 +1,11 @@
 import React from 'react';
 import style from './../Tasks.module.css'
+import { deleteTaskActionCreator } from '../../../../redux/mainReducer';
 
 const SingleTask = (props) => {
+    let deleteTask = () => {
+        props.dispatch(deleteTaskActionCreator(props.id));
+    }
     return (
         <div className={style.singleTask__wrapper}>
             <div className={style.singleTask__container}>
@@ -13,7 +17,7 @@ const SingleTask = (props) => {
                     </div>
                     <div className={style.singleTask__buttons}>
                         <div className={style.star}></div>
-                        <div className={style.x}></div>
+                        <div className={style.x} onClick = {deleteTask}></div>
                     </div>
 
                 </div>
