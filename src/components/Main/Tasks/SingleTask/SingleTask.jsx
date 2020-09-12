@@ -12,12 +12,16 @@ const SingleTask = (props) => {
                 <div className={style.singleTask__body}>
 
                     <div className={style.singleTask__text}>
-                        <input type="checkbox" />
-                        {props.text}
+                        <div className={style.singleTask__checkbox}>
+                            <input type="checkbox" />
+                        </div>
+                        <div className={style.singleTask__task}>
+                            {props.text}
+                        </div>
                     </div>
                     <div className={style.singleTask__buttons}>
-                        <div className={style.star}></div>
-                        <div className={style.x} onClick = {deleteTask}></div>
+                        <div className={style.singleTask__star}></div>
+                        <div className={style.singleTask__x} onClick={deleteTask}></div>
                     </div>
 
                 </div>

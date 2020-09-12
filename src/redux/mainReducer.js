@@ -27,10 +27,8 @@ let mainReducer = (state = initialState, action) => {
             return state;
         case DELETE_TASK:
             state.tasks.splice(action.id, 1);
-            if (state.tasks.length - 1 !== action.id) {
-                for (var count = action.id + 1; count < state.tasks.length; count++) {
-                    state.tasks[count].id--;
-                }
+            for (var j = action.id; j < state.tasks.length; j++) {
+                state.tasks[j].id--;
             }
             i--;
             return state;
