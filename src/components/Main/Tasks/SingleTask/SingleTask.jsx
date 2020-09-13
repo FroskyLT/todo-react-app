@@ -13,7 +13,10 @@ const SingleTask = (props) => {
 
                     <div className={style.singleTask__text}>
                         <div className={style.singleTask__checkbox}>
-                            <input type="checkbox" />
+                            <label className={style.checkbox_label}>
+                                <input type="checkbox" />
+                                <span className={style.checkboxCustom}></span>
+                            </label>
                         </div>
                         <div className={style.singleTask__task}>
                             {props.text}
@@ -21,7 +24,9 @@ const SingleTask = (props) => {
                     </div>
                     <div className={style.singleTask__buttons}>
                         <div className={style.singleTask__star}></div>
-                        <div className={style.singleTask__x} onClick={deleteTask}></div>
+                        <div className={style.x_border}>
+                            <div className={style.singleTask__x} onClick={deleteTask}></div>
+                        </div>
                     </div>
 
                 </div>

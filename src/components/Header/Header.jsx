@@ -6,7 +6,7 @@ const Header = (props) => {
     let callModal = () => props.dispatch(showModalActionCreator());
     return (
         <div className={style.header__wrapper}>
-            header
+            <div className={style.header__category_container}><div className={style.header__category_body}>category <span>&#x25BC;</span></div></div>
             <div className={style.header__buttonAdd} onClick={callModal}>
                 <span>+</span>
             </div>
