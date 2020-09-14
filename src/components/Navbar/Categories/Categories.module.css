@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.categories__wrapper {}
+
+.category {
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 350;
+    letter-spacing: 1px;
+    color: #17344d;
+}
+
+.category:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    background-color: #1b486d;
+    height: 1px;
+    width: 50%;
+    opacity: 0;
+    transition: 500ms ease-out;
+}
+
+.category:hover:after {
+    content: "";
+    opacity: 1;
+}
