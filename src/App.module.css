@@ -33,20 +33,28 @@
     background-color: #FAFAFA;
 }
 
+@media(max-width: 768px){
+    .app__wrapper{
+        grid-template-columns: 5fr 7fr;
+        grid-template-rows: 80px 1fr 50px;
+    }
+}
+
 @media(max-width: 480px){
     .app__wrapper{
         grid-template-areas: 
         "header"
-        "nav"
         "main"
         "footer";
         grid-template-columns: 12fr;
-        grid-template-rows: 50px 100px 1fr 50px;
+        grid-template-rows: 80px 1fr 40px;
     }
     .app__header {
         padding: 5px;
+        background: linear-gradient(0deg, rgba(70,149,204,1) 0%, rgba(90,169,214,1) 50%, rgba(70,149,204,1) 100%);
     }
     .app__navbar {
+        display: none;
         padding: 5px;
     }
 }

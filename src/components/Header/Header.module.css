@@ -8,6 +8,19 @@
     box-sizing: border-box;
 }
 
+.header__burger {
+    display: none;
+}
+.header__burger span {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #404040;
+}
+
 .header__category_container {
     grid-area: content;
     display: flex;
@@ -54,11 +67,19 @@
 
 @media(max-width: 480px){
     .header__wrapper {
-        grid-template-columns: auto 38px;     
+        grid-template-columns: 30px auto 69px;
+    grid-template-areas: 
+    "burger content button";   
     }
+
+    .header__burger {
+        grid-area: burger;
+        display: block;
+    }
+
     .header__buttonAdd {
-        font-size: 2em;
-        line-height: 0.625em;
+        font-size: 2.5em;
+        line-height: 1.1em;
     }
 }
 

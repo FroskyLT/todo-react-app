@@ -6,6 +6,9 @@ const Header = (props) => {
     let callModal = () => props.dispatch(showModalActionCreator());
     return (
         <div className={style.header__wrapper}>
+            <div className={style.header__burger}>
+                <span>&#9776;</span>
+            </div>
             <div className={style.header__category_container}>
                 <div className={style.header__category_body}>
                     category <span className={style.header__category_more}>&#x25BC;</span>

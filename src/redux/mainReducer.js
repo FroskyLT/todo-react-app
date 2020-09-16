@@ -27,7 +27,7 @@ let mainReducer = (state = initialState, action) => {
             return state;
         case DELETE_TASK:
             state.tasks.splice(action.id, 1);
-            for (var j = action.id; j < state.tasks.length; j++) {
+            for (let j = action.id; j < state.tasks.length; j++) {
                 state.tasks[j].id--;
             }
             i--;
@@ -39,8 +39,8 @@ let mainReducer = (state = initialState, action) => {
 
 export default mainReducer;
 
-export const addTaskActionCreator = task =>
-    ({ type: ADD_TASK, task: task });
+export const addTaskActionCreator = () =>
+    ({ type: ADD_TASK });
 
 export const updateSingleTaskActionCreator = task =>
     ({ type: UPDATE_SINGLE_TASK, task: task });

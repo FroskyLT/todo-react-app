@@ -12,7 +12,7 @@ const App = (props) => {
     <div className={style.app__wrapper}>
       {showModal()}
       <header className={style.app__header}><Header dispatch={props.dispatch} /></header>
-      <nav className={style.app__navbar}><Navbar /></nav>
+      <nav className={style.app__navbar}><Navbar dispatch={props.dispatch} navBar={props.state.navBar}/></nav>
       <main className={style.app__main}><Main mainPage={props.state.mainPage} dispatch={props.dispatch}/></main>
       <footer className={style.app__footer}><Footer /></footer>
     </div>
