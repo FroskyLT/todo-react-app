@@ -1,20 +1,20 @@
 import React from 'react';
 import style from './App.module.css';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
-import Modal from './components/Modal/Modal';
-import Navbar from './components/Navbar/Navbar';
+import ModalContainer from './components/Modal/ModalContainer';
+import NavbarContainer from './components/Navbar/NavbarContainer';
 const App = (props) => {
-  let showModal = () => { if (props.state.modalBlock.show) return <Modal dispatch={props.dispatch} mainPage={props.state.mainPage} />; }
+  let showModal = () => { if (props.state.modalBlock.show) return <ModalContainer dispatch={props.dispatch} mainPage={props.state.mainPage} />; }
   let showNav = () => {
     if (window.screen.width >= 480 || props.state.navBar.showPhoneNav )
-      return <nav className={style.app__navbar}><Navbar dispatch={props.dispatch} navBar={props.state.navBar}/></nav>;
+      return <nav className={style.app__navbar}><NavbarContainer dispatch={props.dispatch} navBar={props.state.navBar}/></nav>;
     } 
   return (
     <div className={style.app__wrapper}>
       {showModal()}
-      <header className={style.app__header}><Header dispatch={props.dispatch} /></header>
+      <header className={style.app__header}><HeaderContainer dispatch={props.dispatch} /></header>
       {showNav()}
       <main className={style.app__main}><Main mainPage={props.state.mainPage} dispatch={props.dispatch}/></main>
       <footer className={style.app__footer}><Footer /></footer>

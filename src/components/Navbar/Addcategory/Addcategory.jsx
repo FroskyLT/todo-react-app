@@ -1,14 +1,10 @@
 import React from 'react';
 import style from './Addcategory.module.css';
-import { hideAddCategoryWindowActionCreator, updateSingleCategoryActionCreator, addCategoryActionCreator } from '../../../redux/navbarReducer';
 
-const Addcategory = (props) => {
-    let hideWindow = () => props.dispatch(hideAddCategoryWindowActionCreator());
-    let changeText = (e) => {
-        let text = e.target.value;
-        props.dispatch(updateSingleCategoryActionCreator(text));
-    }
-    let sendText = () => props.dispatch(addCategoryActionCreator());
+const AddCategory = (props) => {
+    let hideWindow = () => props.hideWindow();
+    let changeText = (e) => props.changeText(e.target.value);
+    let sendText = () => props.sendText();
     return (
         <div className={style.addCategory__wrapper}>
             <div className={style.addCategory__body}>
@@ -17,7 +13,8 @@ const Addcategory = (props) => {
                 </div>
                 <div className={style.main}>
                     <div className={style.main__textarea}>
-                        <textarea placeholder='Write Your category here' onChange={changeText} value={props.singleCategory}></textarea>
+                        <textarea placeholder='Write Your category here'
+                            onChange={changeText} value={props.singleCategory}></textarea>
                     </div>
                     <div className={style.main__button}>
                         <button onClick={sendText}>Add</button>
@@ -28,4 +25,4 @@ const Addcategory = (props) => {
     );
 }
 
-export default Addcategory;
+export default AddCategory;

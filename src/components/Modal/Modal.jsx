@@ -4,12 +4,9 @@ import { hideModalActionCreator } from '../../redux/modalReducer';
 import { addTaskActionCreator, updateSingleTaskActionCreator } from '../../redux/mainReducer';
 
 const Modal = (props) => {
-    let hideModal = () => props.dispatch(hideModalActionCreator());
-    let sendTask = () => props.dispatch(addTaskActionCreator());
-    let updateTaskText = (e) => {
-        let text = e.target.value;
-        props.dispatch(updateSingleTaskActionCreator(text));
-    }
+    let hideModal = () => props.hideModal();
+    let sendTask = () => props.sendTask();
+    let updateTaskText = (e) => props.updateTaskText(e.target.value);
     return (
         <div className={style.headerModal__wrapper}>
             <div className={style.headerModal__body}>

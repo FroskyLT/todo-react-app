@@ -1,12 +1,8 @@
 import React from 'react';
 import style from './Categories.module.css';
-import { deleteCategoryActionCreator } from '../../../redux/navbarReducer';
 
 const Categories = (props) => {
-    let deleteCategory = () => {
-        props.dispatch(deleteCategoryActionCreator(props.id));
-    }
-
+    let deleteCategory = () => props.deleteCategory();
     return (
         <div className={style.categories__wrapper}>
             <div className={style.category}>

@@ -1,11 +1,8 @@
 import React from 'react';
 import style from './../Tasks.module.css'
-import { deleteTaskActionCreator } from '../../../../redux/mainReducer';
 
 const SingleTask = (props) => {
-    let deleteTask = () => {
-        props.dispatch(deleteTaskActionCreator(props.id));
-    }
+    let deleteTask = () => props.deleteTask();
     return (
         <div className={style.singleTask__wrapper}>
             <div className={style.singleTask__container}>

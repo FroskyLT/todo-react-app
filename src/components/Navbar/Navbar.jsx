@@ -1,21 +1,12 @@
 import React from 'react';
 import style from './Navbar.module.css';
-import settingsIcon from '../../icons/settings.svg';
-import Categories from './Categories/Categories';
-import Addcategory from './Addcategory/Addcategory';
-import { showAddCategoryWindowActionCreator,hidePhoneNavActionCreator } from '../../redux/navbarReducer';
 
 const Navbar = (props) => {
 
-    let categoriesElement = props.navBar.categories.map(m => <Categories id={m.id} text={m.text} dispatch={props.dispatch} />)
-
-    let showAddCategory = () => props.dispatch(showAddCategoryWindowActionCreator());
-    let changeNavSection = () => {
-        if (props.navBar.addCategoryWindow)
-            return <Addcategory dispatch={props.dispatch} singleCategory={props.navBar.singleCategory} />
-    }
-
-    let hideNav = () => props.dispatch(hidePhoneNavActionCreator());
+    let categoriesElement = props.categoriesElement;
+    let showAddCategory = () => props.showAddCategory();
+    let changeNavSection = () => props.changeNavSection();
+    let hideNav = () => props.hideNav();
 
     return (
         <div className={style.navbar__wrapper}>
@@ -34,7 +25,7 @@ const Navbar = (props) => {
             </section>
             <footer className={style.footer}>
                 <div className={style.footer__body}>
-                    <img src={settingsIcon} className={style.footer__settings} alt="" />
+                    <img src={props.settingsIcon} className={style.footer__settings} alt="" />
                 </div>
             </footer>
         </div>

@@ -1,11 +1,9 @@
 import React from 'react';
 import style from './Header.module.css'
-import { showModalActionCreator } from './../../redux/modalReducer';
-import { showPhoneNavActionCreator } from '../../redux/navbarReducer'
 
 const Header = (props) => {
-    let callModal = () => props.dispatch(showModalActionCreator());
-    let openNav = () => props.dispatch(showPhoneNavActionCreator());
+    let callModal = () => props.callModal();
+    let openNav = () => props.openNav();
     return (
         <div className={style.header__wrapper}>
             <div className={style.header__burger}>
