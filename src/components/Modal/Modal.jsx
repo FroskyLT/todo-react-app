@@ -1,7 +1,5 @@
 import React from 'react';
 import style from './Modal.module.css';
-import { hideModalActionCreator } from '../../redux/modalReducer';
-import { addTaskActionCreator, updateSingleTaskActionCreator } from '../../redux/mainReducer';
 
 const Modal = (props) => {
     let hideModal = () => props.hideModal();
@@ -18,7 +16,7 @@ const Modal = (props) => {
                         <h1>Add task</h1>
                     </div>
                     <div className={style.headerModal__main_textarea}>
-                        <textarea placeholder='Write Your task here' onChange={updateTaskText} value={props.mainPage.singleTask}></textarea>
+                        <textarea placeholder='Write Your task here' onChange={updateTaskText} value={props.singleTask}></textarea>
                     </div>
                     <div className={style.headerModal__main_button}>
                         <button onClick={sendTask}>Add</button>

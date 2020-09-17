@@ -2,16 +2,15 @@ import React from 'react';
 import style from './../Tasks.module.css'
 
 const SingleTask = (props) => {
-    let deleteTask = () => props.deleteTask();
+    let deleteTask = () => props.deleteTask(props.id);
     return (
         <div className={style.singleTask__wrapper}>
             <div className={style.singleTask__container}>
                 <div className={style.singleTask__body}>
-
                     <div className={style.singleTask__text}>
                         <div className={style.singleTask__checkbox}>
                             <label className={style.checkbox_label}>
-                                <input type="checkbox" id={props.id}/>
+                                <input type="checkbox" id={props.id} />
                                 <span className={style.checkboxCustom}></span>
                                 <label htmlFor={props.id} className={style.singleTask__task_label}>{props.text}</label>
                             </label>

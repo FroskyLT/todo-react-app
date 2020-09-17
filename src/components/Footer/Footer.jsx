@@ -4,7 +4,7 @@ import linkedin from '../../icons/linkedin.svg';
 import github from '../../icons/github.svg';
 import facebook from '../../icons/facebook.svg';
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <div className={style.footer__wrapper}>
             <div className={style.footer__body}>
