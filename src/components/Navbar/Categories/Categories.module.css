@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-.categories__wrapper {}
-
 .category {
     font-family: sans-serif;
     padding: 5px;
@@ -18,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 300ms ease-out;
 }
 
 .none {opacity: 0;}
@@ -43,4 +42,13 @@
 .category:hover:after, .category:hover .category__x {
     content: "";
     opacity: 1;
+}
+
+@media (max-width:480px) {
+    .category {
+        font-size: 1.1em;
+    }
+    .category__x {
+        font-size: 0.8em;
+    }
 }

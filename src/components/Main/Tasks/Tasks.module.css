@@ -200,3 +200,27 @@
     .singleTask__x::after {
         transform: rotate(-45deg);
     }
+
+@media(max-width: 480px) {
+    .singleTask__wrapper {
+        padding: 5px;
+    }
+    .singleTask__task_label {
+        font-size: 14px;
+    }
+    .checkbox_label .checkboxCustom {
+        height: 14px;
+        width: 14px;
+    }
+    .checkbox_label input:checked ~ .checkboxCustom::after {
+        height:6px;
+        width: 2px;
+    }
+    .singleTask__x::before, .singleTask__x::after {
+        height: 1.5px;
+    }
+    .singleTask__x {
+        height: 0.8em;
+        width: 0.8em;
+    }
+}

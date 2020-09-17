@@ -3,6 +3,8 @@ const UPDATE_SINGLE_CATEGORY = "UPDATE-SINGLE-CATEGORY";
 const DELETE_CATEGORY = "DELETE-CATEGORY";
 const SHOW_ADD_CATEGORY_WINDOW = "SHOW-ADD-CATEGORY-WINDOW";
 const HIDE_ADD_CATEGORY_WINDOW = "HIDE-ADD-CATEGORY-WINDOW";
+const SHOW_PHONE_NAVIGATION = "SHOW-PHONE-NAVIGATION";
+const HIDE_PHONE_NAVIGATION = "HIDE-PHONE-NAVIGATION";
 
 let i = 1;
 
@@ -11,7 +13,8 @@ let initialState = {
         { id: 0, text: 'Category' },    
     ],
     singleCategory: '',
-    addCategoryWindow: false
+    addCategoryWindow: false,
+    showPhoneNav: false
 }
 
 let mainReducer = (state = initialState, action) => {
@@ -38,6 +41,12 @@ let mainReducer = (state = initialState, action) => {
         case HIDE_ADD_CATEGORY_WINDOW:
             state.addCategoryWindow = false;
             return state;
+        case SHOW_PHONE_NAVIGATION:
+            state.showPhoneNav = true;
+            return state;
+        case HIDE_PHONE_NAVIGATION:
+            state.showPhoneNav = false;
+            return state;          
         default:
             return state;
     }
@@ -55,5 +64,7 @@ export const deleteCategoryActionCreator = id =>
     ({ type: DELETE_CATEGORY, id: id });
 
 export const showAddCategoryWindowActionCreator = () => ({type:SHOW_ADD_CATEGORY_WINDOW});
-
 export const hideAddCategoryWindowActionCreator = () => ({type:HIDE_ADD_CATEGORY_WINDOW});
+
+export const showPhoneNavActionCreator = () => ({type:SHOW_PHONE_NAVIGATION})
+export const hidePhoneNavActionCreator = () => ({type:HIDE_PHONE_NAVIGATION})

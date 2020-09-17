@@ -13,6 +13,7 @@
 .header {
     border-bottom: 1px solid rgb(21, 75, 138);
     padding: 10px 5px 5px;
+    position: relative;
 }
 
 .header__add {
@@ -68,6 +69,7 @@
 
 .section {
     padding: 20px;
+    overflow: auto;
 }
 
 .footer {
@@ -87,5 +89,28 @@
     cursor: pointer;
 }
 
+.header__x {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+}
 
-.hidden {visibility: hidden;}
+@media (max-width:480px) {
+    .navbar__wrapper {
+        grid-template-rows: 100px auto 30px;
+    }
+    .footer {
+        padding: 3px 0 0 0;
+    }
+    .header__x {
+        display: block;
+    }
+    .section {
+        padding: 5px;
+    }
+}
+
